@@ -1,3 +1,9 @@
+/**
+ * Equals and clone are not reliable when
+ * there're properties in the prototype.
+ *
+ * DO NOT USE IN PRODUCTION!
+ */
 var Utils = {
   equals: function (a, b) {
     'use strict';

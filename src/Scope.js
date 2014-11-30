@@ -19,6 +19,8 @@ Scope.prototype.$watch = function (exp, fn) {
   });
 };
 
+// In the complete implementation there're
+// lexer, parser and interpreter.
 Scope.prototype.$eval = function (exp) {
   'use strict';
   var val;
