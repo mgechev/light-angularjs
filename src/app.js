@@ -1,4 +1,6 @@
-Provider.controller('TodoCtrl', function MainCtrl($scope) {
+/* global Provider, DOMCompiler */
+
+Provider.controller('TodoCtrl', function TodoCtrl($scope) {
   'use strict';
   $scope.todos = [];
   $scope.add = function () {

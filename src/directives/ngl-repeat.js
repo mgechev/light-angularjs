@@ -1,3 +1,5 @@
+/* global Provider, DOMCompiler */
+
 Provider.directive('ngl-repeat', function () {
   'use strict';
   return {
