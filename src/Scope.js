@@ -21,19 +21,23 @@ Scope.prototype.$watch = function (exp, fn) {
 
 // In the complete implementation there're
 // lexer, parser and interpreter.
+// Note that this implementation is pretty evil!
+// It uses two dangerouse features:
+// - eval
+// - with
+// The reason the 'use strict' statement is
+// omitted is because of `with`
 Scope.prototype.$eval = function (exp) {
-  'use strict';
   var val;
   if (typeof exp === 'function') {
     val = exp.call(this);
   } else {
-    if ((/\(\)$/).test(exp)) {
-      exp = exp.replace(/\(\)$/, '');
-      if (typeof this[exp] === 'function') {
-        val = this[exp]();
+    try {
+      with (this) {
+        val = eval(exp);
       }
-    } else {
-      val = this[exp];
+    } catch (e) {
+      val = undefined;
     }
   }
   return val;
