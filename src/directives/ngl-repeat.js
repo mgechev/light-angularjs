@@ -5,20 +5,19 @@ Provider.directive('ngl-repeat', function () {
   return {
     scope: false,
     link: function (el, scope, exp) {
-      var scopes = [],
-          parts = exp.split('in'),
-          collectionName = parts[1].trim(),
-          itemName = parts[0].trim(),
-          parentNode = el.parentNode;
+      var scopes = [];
+      var parts = exp.split('in');
+      var collectionName = parts[1].trim();
+      var itemName = parts[0].trim();
+      var parentNode = el.parentNode;
 
       function render(val) {
-        var els = val,
-            currentNode, s;
-
+        var els = val;
+        var currentNode;
+        var s;
         while (parentNode.firstChild) {
           parentNode.removeChild(parentNode.firstChild);
         }
-
         scopes.forEach(function (s) {
           s.$destroy();
         });
@@ -34,10 +33,8 @@ Provider.directive('ngl-repeat', function () {
           parentNode.appendChild(currentNode);
         });
       }
-
       scope.$watch(collectionName, render);
       render(scope.$eval(collectionName));
     }
   };
 });
-

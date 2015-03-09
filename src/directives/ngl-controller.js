@@ -1,3 +1,4 @@
+/* global Provider */
 Provider.directive('ngl-controller', function () {
   'use strict';
   return {
@@ -8,4 +9,3 @@ Provider.directive('ngl-controller', function () {
     }
   };
 });
-

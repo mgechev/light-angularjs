@@ -53,4 +53,3 @@ var Provider = Provider || (function () {
 
 Provider.DIRECTIVES_SUFFIX = 'Directive';
 Provider.CONTROLLERS_SUFFIX = 'Controller';
-

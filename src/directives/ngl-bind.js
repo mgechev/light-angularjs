@@ -1,3 +1,4 @@
+/* global Provider */
 Provider.directive('ngl-bind', function () {
   'use strict';
   return {
@@ -10,4 +11,3 @@ Provider.directive('ngl-bind', function () {
     }
   };
 });
-

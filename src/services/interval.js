@@ -1,3 +1,4 @@
+/* global Provider */
 Provider.service('interval', function ($rootScope) {
   'use strict';
   return function (fn, timeout) {
@@ -7,4 +8,3 @@ Provider.service('interval', function ($rootScope) {
     }, timeout);
   };
 });
-

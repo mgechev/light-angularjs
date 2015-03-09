@@ -78,4 +78,3 @@ Scope.prototype.$digest = function () {
     this.$$children[i].$digest();
   }
 };
-

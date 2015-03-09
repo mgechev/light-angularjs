@@ -1,3 +1,4 @@
+/* global Provider */
 Provider.directive('ngl-model', function () {
   'use strict';
   return {
