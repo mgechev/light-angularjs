@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body ngl-controller="TodoCtrl">
+<section>
+  <input type="text" ngl-model="todo"><button ngl-click="add()">Add</button>
+  <ul>
+    <li ngl-repeat="todo in todos" ngl-bind="todo"></li>
+  </ul>
+</section>
+<script src="./lib/Utils.js"></script>
+<script src="./lib/Scope.js"></script>
+<script src="./lib/Provider.js"></script>
+<script src="./lib/DOMCompiler.js"></script>
+<script src="./lib/directives/ngl-click.js"></script>
+<script src="./lib/directives/ngl-repeat.js"></script>
+<script src="./lib/directives/ngl-controller.js"></script>
+<script src="./lib/directives/ngl-bind.js"></script>
+<script src="./lib/directives/ngl-model.js"></script>
+<script src="./src/app.js"></script>
+</body>
+</html>
