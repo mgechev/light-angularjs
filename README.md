@@ -1,4 +1,4 @@
-Source code for my slides "Lightweight AngularJS".
+Source code for my slides "Lightweight AngularJS". You can find simple application written with the micro-framework implemented in the tutorial [here](https://mgechev.github.io/light-angularjs/).
 
 Blog post on this topic could be found [here](http://blog.mgechev.com/2015/03/09/build-learn-your-own-light-lightweight-angularjs/).
 
